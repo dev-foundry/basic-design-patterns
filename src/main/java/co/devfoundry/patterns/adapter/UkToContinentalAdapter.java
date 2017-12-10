@@ -9,6 +9,6 @@ public class UkToContinentalAdapter implements ContinentalPlug {
     }
 
     public void passElectricity() {
-        ukPlug.passElectricity();
+        ukPlug.powerOn();
     }
 }

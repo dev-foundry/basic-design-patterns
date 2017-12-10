@@ -7,6 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         ContinentalSocket socketCont = new ContinentalSocket();
+        UKSocket ukSocket = new UKSocket();
 
         ContinentalPlug radio = new ContinentalPlug() {
             public void passElectricity() {
@@ -17,7 +18,7 @@ public class Main {
         socketCont.plugIn(radio);
 
         UKPlug radioZUK = new UKPlug() {
-            public void passElectricity() {
+            public void powerOn() {
                 System.out.println("Gra angielska muzyka");
             }
         };
@@ -26,6 +27,12 @@ public class Main {
         UkToContinentalAdapter adapter = new UkToContinentalAdapter(radioZUK);
 
         socketCont.plugIn(adapter);
+
+
+        TwoWayAdapter twoWayAdapter = new TwoWayAdapter(radio,radioZUK);
+
+        socketCont.plugIn(twoWayAdapter);
+        ukSocket.plugIn(twoWayAdapter);
 
     }
 
