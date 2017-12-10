@@ -1,4 +1,4 @@
-package co.devfoundry.adapterpattern;
+package co.devfoundry.patterns.adapter;
 
 public class ContinentalSocket {
 
