@@ -6,33 +6,30 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ContinentalSocket socketCont = new ContinentalSocket();
-        UKSocket ukSocket = new UKSocket();
 
-        ContinentalPlug radio = new ContinentalPlug() {
-            public void passElectricity() {
+        ContinentalDevice radio = new ContinentalDevice() {
+            public void on() {
                 System.out.println("Gra muzyka");
             }
         };
 
-        socketCont.plugIn(radio);
+        ContinentalSocket continentalSocket = new ContinentalSocket();
 
-        UKPlug radioZUK = new UKPlug() {
+        continentalSocket.plugIn(radio);
+
+        UKDevice ukRadio = new UKDevice() {
             public void powerOn() {
-                System.out.println("Gra angielska muzyka");
+                System.out.println("London calling to the faraway towns");
             }
         };
 
+        UKSocket ukSocket = new UKSocket();
 
-        UkToContinentalAdapter adapter = new UkToContinentalAdapter(radioZUK);
+        ukSocket.plugIn(ukRadio);
 
-        socketCont.plugIn(adapter);
+        UKToContinentalAdapter adapter = new UKToContinentalAdapter(ukRadio);
 
-
-        TwoWayAdapter twoWayAdapter = new TwoWayAdapter(radio,radioZUK);
-
-        socketCont.plugIn(twoWayAdapter);
-        ukSocket.plugIn(twoWayAdapter);
+        continentalSocket.plugIn(adapter);
 
     }
 

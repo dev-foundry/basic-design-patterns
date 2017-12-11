@@ -2,7 +2,7 @@ package co.devfoundry.patterns.adapter;
 
 public class UKSocket {
 
-    public void plugIn(UKPlug plug) {
-        plug.powerOn();
+    public void plugIn(UKDevice device) {
+        device.powerOn();
     }
 }

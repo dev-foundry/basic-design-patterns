@@ -1,14 +1,14 @@
 package co.devfoundry.patterns.adapter;
 
-public class UkToContinentalAdapter implements ContinentalPlug {
+public class UKToContinentalAdapter implements ContinentalDevice {
 
-    UKPlug ukPlug;
+    UKDevice device;
 
-    public UkToContinentalAdapter(UKPlug plug) {
-        this.ukPlug = plug;
+    public UKToContinentalAdapter(UKDevice device) {
+        this.device = device;
     }
 
-    public void passElectricity() {
-        ukPlug.powerOn();
+    public void on() {
+        device.powerOn();
     }
 }
