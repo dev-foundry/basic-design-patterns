@@ -6,16 +6,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-
-        ContinentalDevice radio = new ContinentalDevice() {
-            public void on() {
-                System.out.println("Gra muzyka");
-            }
-        };
-
         ContinentalSocket continentalSocket = new ContinentalSocket();
 
-        continentalSocket.plugIn(radio);
+        UKSocket ukSocket = new UKSocket();
 
         UKDevice ukRadio = new UKDevice() {
             public void powerOn() {
@@ -23,14 +16,17 @@ public class Main {
             }
         };
 
-        UKSocket ukSocket = new UKSocket();
+        ContinentalDevice continentalRadio = new ContinentalDevice() {
+            public void on() {
+                System.out.println("London calling to the underworld");
+            }
+        };
 
-        ukSocket.plugIn(ukRadio);
 
-        UKToContinentalAdapter adapter = new UKToContinentalAdapter(ukRadio);
+        TwoWayAdapter adapter = new TwoWayAdapter(ukRadio,continentalRadio);
 
         continentalSocket.plugIn(adapter);
-
+        ukSocket.plugIn(adapter);
     }
 
 }
