@@ -10,31 +10,6 @@ public class House {
     private String doors;
     private String garage;
 
-    public House(String walls, String floors, String rooms, String roof, String windows, String doors, String garage) {
-        this.walls = walls;
-        this.floors = floors;
-        this.rooms = rooms;
-        this.roof = roof;
-        this.windows = windows;
-        this.doors = doors;
-        this.garage = garage;
-    }
-
-    public House(String walls, String floors, String roof) {
-        this.walls = walls;
-        this.floors = floors;
-        this.roof = roof;
-    }
-
-    public House(String walls, String floors, String rooms, String roof, String windows, String doors) {
-        this.walls = walls;
-        this.floors = floors;
-        this.rooms = rooms;
-        this.roof = roof;
-        this.windows = windows;
-        this.doors = doors;
-    }
-
     public String getWalls() {
         return walls;
     }
