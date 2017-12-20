@@ -1,28 +1,12 @@
 package co.devfoundry.templateMethod;
 
-public class ClassicCarStartingSequence {
+public class ClassicCarStartingSequence extends CarStartingSequence {
 
-
-    public void startTheCar() {
-        fastenSeatbelts();
-        startTheIgnition();
-        setTheGear();
-        go();
-    }
-
-    private void go() {
-        System.out.println("Wciskamy pedal gazu");
-    }
-
-    private void setTheGear() {
+    public void setTheGear() {
         System.out.println("Ustawiamy bieg");
     }
 
-    private void startTheIgnition() {
+    public void startTheIgnition() {
         System.out.println("Przekrecamy kluczyk");
-    }
-
-    private void fastenSeatbelts() {
-        System.out.println("Zapinamy pasy");
     }
 }
