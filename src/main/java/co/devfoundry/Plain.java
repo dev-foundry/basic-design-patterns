@@ -1,12 +1,8 @@
 package co.devfoundry;
 
-public class Plain extends Terrain{
-
-    private String description;
-    private int fuelCost;
+public class Plain extends Terrain {
 
     public Plain() {
-        this.description = "Rownina";
-        this.fuelCost = 10;
+        super("Rownina");
     }
 }
