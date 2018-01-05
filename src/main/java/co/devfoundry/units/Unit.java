@@ -1,4 +1,4 @@
-package co.devfoundry;
+package co.devfoundry.units;
 
 public abstract class Unit {
 
@@ -6,7 +6,7 @@ public abstract class Unit {
     private int exp;
     private int dmgDone;
 
-    public Unit(int hp, int exp, int dmgDone) {
+    protected Unit(int hp, int exp, int dmgDone) {
         this.hp = hp;
         this.exp = exp;
         this.dmgDone = dmgDone;
