@@ -1,5 +1,5 @@
 package co.devfoundry.units;
 
 public enum UnitType {
-    RIFLEMAN, TANK;
+    RIFLEMAN, TANK, HELICOPTER;
 }
