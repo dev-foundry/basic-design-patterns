@@ -1,15 +1,15 @@
 package co.devfoundry.units;
 
-public class InfantryUnitFactory extends Factory {
+public class UnitFactory extends Factory {
 
     @Override
     public Unit createUnit(UnitType unitType) {
 
         switch (unitType) {
+            case TANK:
+                return new Tank(100, 0, 20);
             case RIFLEMAN:
-                return new Rifleman(100, 0, 10);
-            case SAPER:
-                return new Rifleman(50, 0, 15);
+                return new Rifleman(25, 0, 10);
             default:
                 throw new UnsupportedOperationException("No such type");
         }
