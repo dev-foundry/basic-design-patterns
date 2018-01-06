@@ -1,11 +1,7 @@
 package co.devfoundry;
 
-public class SwampPlain {
-    private String description;
-    private int fuelCost;
-
+public class SwampPlain extends Terrain {
     public SwampPlain() {
-        this.description = "Bagnista rownina";
-        this.fuelCost = 20;
+        super("Bagnista równina", 20);
     }
 }
