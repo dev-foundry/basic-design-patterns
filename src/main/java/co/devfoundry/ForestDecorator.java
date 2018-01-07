@@ -2,12 +2,13 @@ package co.devfoundry;
 
 public class ForestDecorator extends TerrainDecorator {
 
-    public ForestDecorator(String description, Terrain terrain) {
-        super(description, terrain);
+
+    public ForestDecorator(Terrain terrain) {
+        super(terrain);
     }
 
     @Override
     public int fuelCost() {
-        return wrapper.fuelCost() + 10;
+        return terrain.fuelCost() + 5;
     }
 }

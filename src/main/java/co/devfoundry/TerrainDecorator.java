@@ -1,11 +1,11 @@
 package co.devfoundry;
 
-public abstract class TerrainDecorator extends Terrain {
+abstract public class TerrainDecorator extends Terrain {
 
-    protected Terrain wrapper;
+    protected Terrain terrain;
 
-    public TerrainDecorator(String description, Terrain terrain) {
-        super(description);
-        wrapper = terrain;
+    public TerrainDecorator(Terrain terrain) {
+        super("", 0);
+        this.terrain = terrain;
     }
 }

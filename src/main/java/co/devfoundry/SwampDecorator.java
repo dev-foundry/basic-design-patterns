@@ -2,12 +2,12 @@ package co.devfoundry;
 
 public class SwampDecorator extends TerrainDecorator {
 
-    public SwampDecorator(String description, Terrain terrain) {
-        super(description, terrain);
+    public SwampDecorator(Terrain terrain) {
+        super(terrain);
     }
 
     @Override
     public int fuelCost() {
-        return wrapper.fuelCost() * 2;
+        return terrain.fuelCost() + 15;
     }
 }
