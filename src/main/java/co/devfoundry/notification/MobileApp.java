@@ -2,10 +2,10 @@ package co.devfoundry.notification;
 
 import co.devfoundry.order.Order;
 
-public class MobileApp {
+public class MobileApp implements Observer {
 
-    public void updateOrderStatus(Order order) {
-        System.out.println("Aplikacja mobilna - zamówienie numer: " + order.getOrderNumber() + " zamieniło status na: " + order.getOrderStatus());
+    public void update(Order order) {
+        System.out.println("Aplikacja mobilna - zamówienie numer: " + order.getOrderNumber() + " zmieniło status na: " + order.getOrderStatus());
     }
 
 }
