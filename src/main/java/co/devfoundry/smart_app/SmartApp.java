@@ -1,30 +1,20 @@
 package co.devfoundry.smart_app;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SmartApp {
 
     private Double version;
-    private List<Double> versionList = new ArrayList<Double>();
 
-    public void setVersion(Double version) {
+    public void changeVersion(Double version) {
         this.version = version;
+        System.out.println("Nowa wersja: " + this.version);
     }
 
-    public List<Double> getVersionList() {
-        return versionList;
+    public SmartAppMemento save() {
+        return new SmartAppMemento(this.version);
     }
 
-    public void setVersionList(List<Double> versionList) {
-        this.versionList = versionList;
-    }
-
-    @Override
-    public String toString() {
-        return "SmartApp{" +
-                "version=" + version +
-                '}';
+    public void load(SmartAppMemento smartAppMemento) {
+        this.version = smartAppMemento.getVersion();
     }
 
 }
