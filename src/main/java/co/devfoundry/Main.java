@@ -1,26 +1,24 @@
 package co.devfoundry;
 
-import co.devfoundry.smart_app.SmartApp;
-import co.devfoundry.smart_app.SmartAppCaretaker;
+import co.devfoundry.operating_system.OperatingSystem;
+import co.devfoundry.operating_system.OperatingSystemCaretaker;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        SmartAppCaretaker smartAppCaretaker = new SmartAppCaretaker();
-        SmartApp smartApp = new SmartApp();
+        OperatingSystemCaretaker operatingSystemCaretaker = new OperatingSystemCaretaker();
+        OperatingSystem operatingSystem = new OperatingSystem();
 
-        smartApp.changeVersion(1.0);
-        smartApp.changeVersion(1.1);
-        smartApp.changeVersion(1.2);
+        operatingSystem.createBackup();
+        operatingSystem.createBackup();
 
-        smartAppCaretaker.addMemento(smartApp.save());
+        operatingSystemCaretaker.addMemento(operatingSystem.save());
 
-        smartApp.changeVersion(1.3);
-        smartApp.changeVersion(2.0);
-        smartApp.changeVersion(2.1);
+        operatingSystem.createBackup();
+        operatingSystem.createBackup();
 
-        smartApp.load(smartAppCaretaker.getMemento(0));
+        operatingSystem.load(operatingSystemCaretaker.getMemento());
 
     }
 
