@@ -1,20 +1,20 @@
 package co.devfoundry;
 
-import co.devfoundry.chef.Chef;
-import co.devfoundry.chef.egg_cooker.HardBoiledEggCooker;
-import co.devfoundry.chef.egg_cooker.SoftBoiledEggCooker;
+import co.devfoundry.price_calculator.PriceCalculator;
+import co.devfoundry.price_calculator.pricing_strategy.RegularPrice;
+import co.devfoundry.price_calculator.pricing_strategy.SalePrice;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        //Nowe zamówienie - jajka na twardo!
-        Chef chef = new Chef("Gordon Gessler");
-        chef.setEggCooker(new HardBoiledEggCooker());
-        chef.cook();
-        //Nowe zamówienie - jajka na miękko!
-        chef.setEggCooker(new SoftBoiledEggCooker());
-        chef.cook();
+        PriceCalculator priceCalculator = new PriceCalculator();
+
+        priceCalculator.setPricingStrategy(new RegularPrice());
+        priceCalculator.calculate(100);
+
+        priceCalculator.setPricingStrategy(new SalePrice());
+        priceCalculator.calculate(100);
 
     }
 
