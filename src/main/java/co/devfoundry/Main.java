@@ -1,22 +1,22 @@
 package co.devfoundry;
 
-import co.devfoundry.message.Message;
-import co.devfoundry.officer.*;
+import co.devfoundry.children.*;
+import co.devfoundry.request.MotherRequest;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Message message = new Message("Atakować!", 20, OfficerRank.GENERAL);
+        MotherRequest motherRequest = new MotherRequest(Shelf.HIGH);
 
-        Officer sergeant = new Sergeant();
-        Officer captain = new Captain();
-        Officer general = new General();
+        Child tomek = new Tomek();
+        Child ania = new Ania();
+        Child antek = new Antek();
 
-        sergeant.setSuperiorOfficer(captain);
-        captain.setSuperiorOfficer(general);
+        tomek.setTallerChild(ania);
+        ania.setTallerChild(antek);
 
-        sergeant.processMessage(message);
+        tomek.processRequest(motherRequest);
 
     }
 
