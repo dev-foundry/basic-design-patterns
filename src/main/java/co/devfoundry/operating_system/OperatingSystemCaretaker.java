@@ -5,7 +5,7 @@ public class OperatingSystemCaretaker {
     private OperatingSystemMemento operatingSystemMemento;
 
     public void addMemento(OperatingSystemMemento operatingSystemMemento) {
-        System.out.println("Zapisana backup nr: " + operatingSystemMemento.getBackup());
+        System.out.println("Zapisano backup nr: " + operatingSystemMemento.getBackup());
         this.operatingSystemMemento = operatingSystemMemento;
     }
 
