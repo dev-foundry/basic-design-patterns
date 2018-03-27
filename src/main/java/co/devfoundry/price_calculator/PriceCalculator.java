@@ -6,8 +6,8 @@ public class PriceCalculator {
 
     private PricingStrategy pricingStrategy;
 
-    public void calculate(int price) {
-        this.pricingStrategy.calculatePrice(price);
+    public void calculate(int price, boolean isSignedUpForNewsletter) {
+        this.pricingStrategy.calculatePrice(price, isSignedUpForNewsletter);
     }
 
     public void setPricingStrategy(PricingStrategy pricingStrategy) {
