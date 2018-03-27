@@ -1,20 +1,25 @@
 package co.devfoundry.operating_system;
 
+import java.util.Date;
+
 public class OperatingSystem {
 
-    private int backup = 0;
+    private int backupNumber = 0;
+    private Date backupDate;
 
     public void createBackup() {
-        this.backup++;
-        System.out.println("Utworzono backup nr: " + this.backup);
+        this.backupNumber++;
+        this.backupDate = new Date();
+        System.out.println("Utworzono backup nr: " + this.backupNumber + " z datą: " + backupDate);
     }
 
     public OperatingSystemMemento save() {
-        return new OperatingSystemMemento(this.backup);
+        return new OperatingSystemMemento(this.backupNumber, this.backupDate);
     }
 
     public void load(OperatingSystemMemento operatingSystemMemento) {
-        this.backup = operatingSystemMemento.getBackup();
+        this.backupNumber = operatingSystemMemento.getBackupNumber();
+        this.backupDate = operatingSystemMemento.getBackupDate();
     }
 
 }
