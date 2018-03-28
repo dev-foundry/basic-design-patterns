@@ -1,12 +1,11 @@
 package co.devfoundry.music_player;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class MusicPlayer {
 
-    private List<String> tracks = new ArrayList<String>(Arrays.asList("Track 1", "Track 2", "Track 3"));
+    private List<String> tracks = Arrays.asList("Track 1", "Track 2", "Track 3");
     private int currentTrackNumber = 0;
 
     public void playFirstTrack() {

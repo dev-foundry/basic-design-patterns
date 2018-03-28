@@ -1,17 +1,17 @@
 package co.devfoundry.music_player;
 
-import co.devfoundry.music_player.command.Command;
+import co.devfoundry.music_player.command.MusicPlayerCommand;
 
 public class MusicPlayerRemote {
 
-    private Command command;
+    private MusicPlayerCommand musicPlayerCommand;
 
-    public void setCommand(Command command) {
-        this.command = command;
+    public void setMusicPlayerCommand(MusicPlayerCommand musicPlayerCommand) {
+        this.musicPlayerCommand = musicPlayerCommand;
     }
 
     public void pressButton() {
-        command.execute();
+        musicPlayerCommand.play();
     }
 
 }

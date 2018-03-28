@@ -2,7 +2,7 @@ package co.devfoundry.music_player.command;
 
 import co.devfoundry.music_player.MusicPlayer;
 
-public class PlayFirstTrack implements Command {
+public class PlayFirstTrack implements MusicPlayerCommand {
 
     private MusicPlayer musicPlayer;
 
@@ -10,7 +10,7 @@ public class PlayFirstTrack implements Command {
         this.musicPlayer = musicPlayer;
     }
 
-    public void execute() {
+    public void play() {
         musicPlayer.playFirstTrack();
     }
 

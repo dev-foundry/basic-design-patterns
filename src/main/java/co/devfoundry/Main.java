@@ -13,15 +13,15 @@ public class Main {
         MusicPlayer musicPlayer = new MusicPlayer();
         MusicPlayerRemote remote = new MusicPlayerRemote();
 
-        remote.setCommand(new PlayFirstTrack(musicPlayer));
+        remote.setMusicPlayerCommand(new PlayFirstTrack(musicPlayer));
         remote.pressButton();
 
-        remote.setCommand(new PlayNextTrack(musicPlayer));
+        remote.setMusicPlayerCommand(new PlayNextTrack(musicPlayer));
         remote.pressButton();
         remote.pressButton();
         remote.pressButton();
 
-        remote.setCommand(new PlayRandomTrack(musicPlayer));
+        remote.setMusicPlayerCommand(new PlayRandomTrack(musicPlayer));
         remote.pressButton();
         remote.pressButton();
 
