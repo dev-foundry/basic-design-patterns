@@ -1,6 +1,6 @@
-package co.devfoundry.workshop.command;
+package co.devfoundry.music_player.command;
 
-import co.devfoundry.workshop.MusicPlayer;
+import co.devfoundry.music_player.MusicPlayer;
 
 public class PlayRandomTrack implements Command {
 

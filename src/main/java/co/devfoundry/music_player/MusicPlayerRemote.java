@@ -1,6 +1,6 @@
-package co.devfoundry.workshop;
+package co.devfoundry.music_player;
 
-import co.devfoundry.workshop.command.Command;
+import co.devfoundry.music_player.command.Command;
 
 public class MusicPlayerRemote {
 

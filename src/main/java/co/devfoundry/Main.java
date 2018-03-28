@@ -1,10 +1,10 @@
 package co.devfoundry;
 
-import co.devfoundry.workshop.MusicPlayer;
-import co.devfoundry.workshop.MusicPlayerRemote;
-import co.devfoundry.workshop.command.PlayFirstTrack;
-import co.devfoundry.workshop.command.PlayNextTrack;
-import co.devfoundry.workshop.command.PlayRandomTrack;
+import co.devfoundry.music_player.MusicPlayer;
+import co.devfoundry.music_player.MusicPlayerRemote;
+import co.devfoundry.music_player.command.PlayFirstTrack;
+import co.devfoundry.music_player.command.PlayNextTrack;
+import co.devfoundry.music_player.command.PlayRandomTrack;
 
 public class Main {
 

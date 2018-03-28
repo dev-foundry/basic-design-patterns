@@ -1,4 +1,4 @@
-package co.devfoundry.workshop.command;
+package co.devfoundry.music_player.command;
 
 public interface Command {
 

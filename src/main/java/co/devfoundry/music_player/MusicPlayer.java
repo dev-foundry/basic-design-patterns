@@ -1,4 +1,4 @@
-package co.devfoundry.workshop;
+package co.devfoundry.music_player;
 
 import java.util.ArrayList;
 import java.util.Arrays;
