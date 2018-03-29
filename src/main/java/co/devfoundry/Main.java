@@ -24,7 +24,7 @@ public class Main {
         weatherForecast.unregisterObserver(tvNews);
         weatherForecast.unregisterObserver(radioNews);
 
-        System.out.println("Nowa prognoza - powiadomienie tylko dla serwisu internetowego:");
+        System.out.println("\nNowa prognoza - powiadomienie tylko dla serwisu internetowego:");
 
         weatherForecast.updateForecast(18, 1007);
 
