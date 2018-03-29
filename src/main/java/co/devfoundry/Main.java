@@ -1,36 +1,32 @@
 package co.devfoundry;
 
-import co.devfoundry.notification.Email;
-import co.devfoundry.notification.MobileApp;
-import co.devfoundry.notification.TextMessage;
-import co.devfoundry.order.Order;
-import co.devfoundry.order.OrderStatus;
+import co.devfoundry.notification.InternetNews;
+import co.devfoundry.notification.RadioNews;
+import co.devfoundry.notification.TvNews;
+import co.devfoundry.weather_forecast.WeatherForecast;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Order order = new Order(110L, OrderStatus.ZAREJESTROWANE);
+        WeatherForecast weatherForecast = new WeatherForecast(25, 1003);
 
-        TextMessage textMessage = new TextMessage();
-        MobileApp mobileApp = new MobileApp();
-        Email email = new Email();
+        RadioNews radioNews = new RadioNews();
+        InternetNews internetNews = new InternetNews();
+        TvNews tvNews = new TvNews();
 
-        order.registerObserver(textMessage);
-        order.registerObserver(mobileApp);
-        order.registerObserver(email);
+        weatherForecast.registerObserver(radioNews);
+        weatherForecast.registerObserver(internetNews);
+        weatherForecast.registerObserver(tvNews);
 
-        order.notifyObservers();
+        weatherForecast.notifyObservers();
 
-        System.out.println("------------------------------");
+        weatherForecast.unregisterObserver(tvNews);
+        weatherForecast.unregisterObserver(radioNews);
 
-        order.changeOrderStatus(OrderStatus.WYSLANE);
+        System.out.println("Nowa prognoza - powiadomienie tylko dla serwisu internetowego:");
 
-        order.unregisterObserver(email);
-
-        System.out.println("------------------------------");
-
-        order.changeOrderStatus(OrderStatus.ODEBRANE);
+        weatherForecast.updateForecast(18, 1007);
 
     }
 

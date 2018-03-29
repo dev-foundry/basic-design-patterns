@@ -1,4 +1,4 @@
-package co.devfoundry.order;
+package co.devfoundry.weather_forecast;
 
 import co.devfoundry.notification.Observer;
 

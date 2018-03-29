@@ -1,9 +1,9 @@
 package co.devfoundry.notification;
 
-import co.devfoundry.order.Order;
+import co.devfoundry.weather_forecast.WeatherForecast;
 
 public interface Observer {
 
-    void update(Order order);
+    void updateForecast(WeatherForecast weatherForecast);
 
 }
