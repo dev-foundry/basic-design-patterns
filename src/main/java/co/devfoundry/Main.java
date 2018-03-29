@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("\nNowy posiłek: ");
+        System.out.println("Nowy posiłek: ");
         Meal riceMeal = new RiceMeal();
         riceMeal.prepareMeal();
 
