@@ -1,16 +1,23 @@
 package co.devfoundry;
 
-import co.devfoundry.patterns.singleton.GameEngine;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        GameEngine engine = GameEngine.getInstance();
+        QuessGame game = QuessGame.getInstance();
 
-        GameEngine engine2 = GameEngine.getInstance();
+        game.play();
 
-        System.out.println(engine==engine2);
+        int score = game.getScore();
+
+        QuessGame anotherGameReference = QuessGame.getInstance();
+
+        if(game == anotherGameReference  ) {
+            System.out.println("Singleton!");
+            if(score == anotherGameReference.getScore()) {
+                System.out.println("I punkty się zgadzają!");
+            }
+        }
 
     }
 
