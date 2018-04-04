@@ -1,22 +1,22 @@
 package co.devfoundry;
 
-import co.devfoundry.units.*;
+import co.devfoundry.cars.BMWModel;
+import co.devfoundry.cars.Car;
+import co.devfoundry.cars.FordModel;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Factory blueFactory = new BlueFactory();
-        Factory redFactory = new RedFactory();
 
-        MechanizedUnit redTank = redFactory.createMechanizedUnit(UnitType.TANK);
-        InfantryUnit redInfantry = redFactory.createInfantryUnit(UnitType.RIFLEMAN);
+        Factory commonwealthFactory = new CommonwealthFactory();
+        Factory continentalFactory = new ContinentalFactory();
 
-        MechanizedUnit blueTank = blueFactory.createMechanizedUnit(UnitType.TANK);
-        InfantryUnit blueInfantry = blueFactory.createInfantryUnit(UnitType.RIFLEMAN);
+        Car bmw = commonwealthFactory.buildBMW(BMWModel.E60);
+        System.out.println(bmw.getSteeringWheelPosition());
 
-        AirUnit blueHelicopter = blueFactory.createAirUnit(UnitType.HELICOPTER);
-        AirUnit redHelicopter = redFactory.createAirUnit(UnitType.HELICOPTER);
+        Car ford = continentalFactory.buildFord(FordModel.CMAX);
+        System.out.println(ford.getSteeringWheelPosition());
 
     }
 
