@@ -3,18 +3,18 @@ package co.devfoundry;
 import java.util.Random;
 import java.util.Scanner;
 
-public class QuessGame {
+public class GuessGame {
 
-    private static QuessGame instance = new QuessGame();
+    private static GuessGame instance = new GuessGame();
     private int score = 0;
     private Random random = new Random();
     private Scanner scanner = new Scanner(System.in);
 
-    private QuessGame() {
+    private GuessGame() {
 
     }
 
-    public static QuessGame getInstance() {
+    public static GuessGame getInstance() {
 
         return instance;
 
