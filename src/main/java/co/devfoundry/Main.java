@@ -12,7 +12,7 @@ public class Main {
 
         ChessPiece whiteQueen = new WhiteQueen("Biala Królowa");
 
-        //exacly same color object is used
+        //exactly same color object is used
         System.out.println(blackPawn.getColor()==blackQueen.getColor());
         System.out.println(whitePawn.getColor()==whiteQueen.getColor());
 
