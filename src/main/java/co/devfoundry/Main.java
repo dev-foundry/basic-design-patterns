@@ -1,11 +1,12 @@
 package co.devfoundry;
 
 
-import co.devfoundry.activity.Activity;
-import co.devfoundry.activity.Squash;
-import co.devfoundry.activity.Treadmill;
-import co.devfoundry.activity.Weights;
-import co.devfoundry.visitor.VisitorImpl;
+import co.devfoundry.transport.Animal;
+import co.devfoundry.transport.Person;
+import co.devfoundry.transport.Shipment;
+import co.devfoundry.transport.Transportable;
+import co.devfoundry.visitor.NameTransportVisitor;
+import co.devfoundry.visitor.PriceTransportVisitor;
 
 import java.util.Arrays;
 import java.util.List;
@@ -14,21 +15,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Treadmill treadmill = new Treadmill(400);
-        Squash squash = new Squash(45);
-        Weights weights = new Weights(50, 10);
+        Animal animal = new Animal("dog", 30);
+        Person person = new Person("Dawid", "Nowak", true);
+        Shipment shipment = new Shipment("PL", "4325452", false);
 
-        VisitorImpl visitor = new VisitorImpl();
+        PriceTransportVisitor priceTransportVisitor = new PriceTransportVisitor();
 
-        treadmill.accept(visitor);
-        squash.accept(visitor);
-        weights.accept(visitor);
+        List<Transportable> transportableList = Arrays.asList(animal, person, shipment);
+
+        transportableList.forEach(transportable -> transportable.accept(priceTransportVisitor));
 
         System.out.println("----------------------");
 
-        List<Activity> activityList = Arrays.asList(treadmill, squash, weights);
+        NameTransportVisitor nameTransportVisitor = new NameTransportVisitor();
 
-        activityList.forEach(activity -> activity.accept(visitor));
+        transportableList.forEach(transportable -> transportable.accept(nameTransportVisitor));
 
     }
 
