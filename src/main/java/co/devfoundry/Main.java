@@ -7,10 +7,8 @@ public class Main {
         CoffeeMachine coffeeMachine = new CoffeeMachine();
 
         coffeeMachine.insertTheCoin();
-        coffeeMachine.returnTheCoin();
+        coffeeMachine.pushTheButton();
         coffeeMachine.takeTheCup();
-
-
 
     }
 
