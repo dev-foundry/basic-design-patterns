@@ -1,22 +1,22 @@
 package co.devfoundry.deliverybox;
 
-class DeliveryBoxSystem {
+public class DeliveryBoxSystem {
 
-    void sendNotification() {
+    public void sendNotification() {
         System.out.println("Text message sent to the client.");
     }
 
-    boolean isPaymentSecured() {
+    public boolean isPaymentSecured() {
         System.out.println("Payment has been secured.");
         return true;
     }
 
-    boolean isUserDataValidated() {
+    public boolean isUserDataValidated() {
         System.out.println("User has been validated.");
         return true;
     }
 
-    void scheduleDelivery() {
+    public void scheduleDelivery() {
         System.out.println("Delivery scheduled for tomorrow.");
     }
 

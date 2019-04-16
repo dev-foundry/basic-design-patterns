@@ -1,22 +1,22 @@
 package co.devfoundry.deliverybox;
 
-class DeliveryBox {
+public class DeliveryBox {
 
-    boolean isDeliveryBoxFull() {
+    public boolean isDeliveryBoxFull() {
         System.out.println("Delivery box is not full.");
         return false;
     }
 
-    boolean isDeliveryBoxBroken() {
+    public boolean isDeliveryBoxBroken() {
         System.out.println("Delivery box is not broken.");
         return false;
     }
 
-    void getUserData() {
+    public void getUserData() {
         System.out.println("User data entered.");
     }
 
-    void openBox() {
+    public void openBox() {
         System.out.println("Box opened.");
     }
 
