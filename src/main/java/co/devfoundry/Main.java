@@ -16,7 +16,7 @@ public class Main {
         int savedGamesCount = 20;
         List<SavedGame> savedGames = new ArrayList<>(savedGamesCount);
         for(int i=0;i<20;i++) {
-            SavedGame sg = new SavedGame();
+            SavedGame sg = new SavedGameProxy();
             sg.initialize();
             savedGames.add(sg);
         }
